@@ -1,0 +1,19 @@
+npm install
+npm run dev
+npm run build
+npx serve -s dist
+docker login
+docker build -t sornchanok/react-docker-test3:0.1 .
+docker images
+docker ps --all 
+docker run -d -p 3000:3000 --name reatc-docker sornchanok/react-docker-test3:0.1
+docker ps
+docker stop reatc-docker
+docker ps
+docker images
+docker rm reatc-docker
+docker push sornchanok/react-docker-test3:0.1
+docker images
+git remote -v
+git remote remove origin
+git -v
